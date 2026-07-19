@@ -18,11 +18,13 @@ function! DeadKeys()
 	imap `i ì
 	imap `o ò
 	imap `u ù
+	imap `y ỳ
 	imap `A À
 	imap `E È
 	imap `I Ì
 	imap `O Ò
 	imap `U Ù
+	imap `Y Ỳ
 	imap `<space> `
 
 	" umlaut
@@ -31,11 +33,13 @@ function! DeadKeys()
 	imap "i ï
 	imap "o ö
 	imap "u ü
+	imap "y ÿ
 	imap "A Ä
 	imap "E Ë
 	imap "I Ï
 	imap "O Ö
 	imap "U Ü
+	imap "Y Ÿ
 	imap "<space> "
 
 	" macrons
@@ -44,11 +48,13 @@ function! DeadKeys()
 	imap :i ī
 	imap :o ō
 	imap :u ū
+	imap :y ȳ
 	imap :A Ā
 	imap :E Ē
 	imap :I Ī
 	imap :O Ō
 	imap :U Ū
+	imap :Y Ȳ
 
 	" acute accents
 	imap 'a á
@@ -69,6 +75,8 @@ function! DeadKeys()
 	imap 'O Ó
 	imap 'u ú
 	imap 'U Ú
+	imap 'y ý
+	imap 'Y Ý
 	imap '<space> '
 
 	" under dot
@@ -102,6 +110,8 @@ function! DeadKeys()
 	imap ~O Õ
 	imap ~u ũ
 	imap ~U Ũ
+	imap ~y ỹ
+	imap ~Y Ỹ
 	imap ~n ñ
 	imap ~N Ñ
 
@@ -140,6 +150,8 @@ function! DeadKeys()
 	imap ^O Ô
 	imap ^u û
 	imap ^U Û
+	imap ^y ŷ
+	imap ^Y Ŷ
 
 	" cedilla and ogonek
 	imap ,c ç
@@ -155,6 +167,62 @@ function! DeadKeys()
 	imap ,o ǫ
 	imap ,O Ǫ
 
+	" macron+grave
+	imap `:a ā̀
+	imap `:A Ā̀
+	imap `:e ḕ
+	imap `:E Ḕ
+	imap `:i ī̀
+	imap `:I ī̀
+	imap `:o ṑ
+	imap `:O Ṑ
+	imap `:u ū̀
+	imap `:U Ū̀
+	imap `:y ȳ̀
+	imap `:Y Ȳ̀
+
+	" macron+circumflex
+	imap ^:a ā̂
+	imap ^:A Ā̂
+	imap ^:e ē̂
+	imap ^:E Ē̂
+	imap ^:i ī̂
+	imap ^:I Ī̂
+	imap ^:O Ō̂
+	imap ^:o ō̂
+	imap ^:u ū̂
+	imap ^:U Ū̂
+	imap ^:y ȳ̂
+	imap ^:Y Ȳ̂
+
+	" macron+acute
+	imap ':a ā́
+	imap ':A Ā́
+	imap ':e ḗ
+	imap ':E Ḗ
+	imap ':i ī́
+	imap ':I Ī́
+	imap ':o ṓ
+	imap ':O Ṓ
+	imap ':u ū́
+	imap ':U Ū́
+	imap ':y ȳ́
+	imap ':Y Ȳ́
+
+	" ligatures
+	imap `,ae æ̀
+	imap `,AE Æ̀
+	imap ',ae ǽ
+	imap ',AE Ǽ
+	imap ^,ae æ̂
+	imap ^,AE Æ̂
+	imap `,oe œ̀
+	imap `,OE Œ̀
+	imap ^,oe œ̂
+	imap ^,OE Œ̂
+	imap ',oe œ́
+	imap ',OE Œ́
+
 endfunction "deadkeys()
 
 
@@ -168,11 +236,13 @@ function! DeadKeysOff()
 	iunmap `i
 	iunmap `o
 	iunmap `u
+	iunmap `y
 	iunmap `A
 	iunmap `E
 	iunmap `I
 	iunmap `O
 	iunmap `U
+	iunmap `Y
 	iunmap `<space>
 
 	" unmapping umlauts
@@ -181,11 +251,13 @@ function! DeadKeysOff()
 	iunmap "i
 	iunmap "o
 	iunmap "u
+	iunmap "y
 	iunmap "A
 	iunmap "E
 	iunmap "I
 	iunmap "O
 	iunmap "U
+	iunmap "Y
 	iunmap "<space>
 
 	" unmapping macrons
@@ -194,11 +266,13 @@ function! DeadKeysOff()
 	iunmap :i
 	iunmap :o
 	iunmap :u
+	iunmap :y
 	iunmap :A
 	iunmap :E
 	iunmap :I
 	iunmap :O
 	iunmap :U
+	iunmap :Y
 
 	" unmapping acutes
 	iunmap 'a
@@ -219,6 +293,8 @@ function! DeadKeysOff()
 	iunmap 'O
 	iunmap 'u
 	iunmap 'U
+	iunmap 'y
+	iunmap 'Y
 	iunmap '<space>
 
 	" under dot
@@ -252,6 +328,8 @@ function! DeadKeysOff()
 	iunmap ~O
 	iunmap ~u
 	iunmap ~U
+	iunmap ~y
+	iunmap ~Y
 	iunmap ~n
 
 	" caron
@@ -289,6 +367,8 @@ function! DeadKeysOff()
 	iunmap ^O
 	iunmap ^u
 	iunmap ^U
+	iunmap ^y
+	iunmap ^Y
 
 	" cedilla and ogonek
 	iunmap ,c
@@ -303,5 +383,61 @@ function! DeadKeysOff()
 	iunmap ,U
 	iunmap ,o
 	iunmap ,O
+
+	" macron+grave
+	iunmap `:a
+	iunmap `:A
+	iunmap `:e
+	iunmap `:E
+	iunmap `:i
+	iunmap `:I
+	iunmap `:o
+	iunmap `:O
+	iunmap `:u
+	iunmap `:U
+	iunmap `:y
+	iunmap `:Y
+
+	" macron+circumflex
+	iunmap ^:a
+	iunmap ^:A
+	iunmap ^:e
+	iunmap ^:E
+	iunmap ^:i
+	iunmap ^:I
+	iunmap ^:O
+	iunmap ^:o
+	iunmap ^:u
+	iunmap ^:U
+	iunmap ^:y
+	iunmap ^:Y
+
+	" macron+acute
+	iunmap ':a
+	iunmap ':A
+	iunmap ':e
+	iunmap ':E
+	iunmap ':i
+	iunmap ':I
+	iunmap ':o
+	iunmap ':O
+	iunmap ':u
+	iunmap ':U
+	iunmap ':y
+	iunmap ':Y
+
+	" ligatures
+	iunmap `,ae
+	iunmap `,AE
+	iunmap ',ae
+	iunmap ',AE
+	iunmap ^,ae
+	iunmap ^,AE
+	iunmap `,oe
+	iunmap `,OE
+	iunmap ^,oe
+	iunmap ^,OE
+	iunmap ',oe
+	iunmap ',OE
 
 endfunction
